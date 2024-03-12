@@ -33,13 +33,15 @@ public class DataToPdf {
 
                 // Define font and font size
                 contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 12);
+
                 // Execute query and retrieve data
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 ResultSet resultSet = preparedStatement.executeQuery();
 
                 // Write data to the PDF
                 contentStream.beginText();
-                contentStream.newLineAtOffset(100, 700); // Set position for text
+                contentStream.newLineAtOffset(100, 700); // Set initial position for text
+                int verticalOffset = 0; // Initialize vertical offset
                 while (resultSet.next()) {
                     String data = resultSet.getInt("id") + " "
                             + resultSet.getString("name") + " "
@@ -48,8 +50,9 @@ public class DataToPdf {
                             + resultSet.getString("email") + " "
                             + resultSet.getString("telegarm") + " "
                             + resultSet.getString("password");
+                    contentStream.newLineAtOffset(0, -verticalOffset); // Move to the next line
                     contentStream.showText(data);
-                    contentStream.newLine();
+                    verticalOffset += 15; // Increment vertical offset
                 }
                 contentStream.endText();
 

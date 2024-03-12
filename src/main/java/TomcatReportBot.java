@@ -37,13 +37,20 @@ public class TomcatReportBot extends TelegramLongPollingBot {
             DataToPdf.generatePdfFromResultSet(outputStream);
 
             // Send the PDF to Telegram
-            SendDocument sendDocument = new SendDocument();
-            sendDocument.setChatId("1239004838"); // Change to your chat ID
-            sendDocument.setDocument(new InputFile(new ByteArrayInputStream(outputStream.toByteArray()), "report.pdf"));
-            execute(sendDocument);
+            SendDocument sendDocument1 = new SendDocument();
+            sendDocument1.setChatId("1239004838"); // Chat ID 1
+            sendDocument1.setDocument(new InputFile(new ByteArrayInputStream(outputStream.toByteArray()), "report.pdf"));
+
+            SendDocument sendDocument2 = new SendDocument();
+            sendDocument2.setChatId("1389023654"); // Chat ID 2
+            sendDocument2.setDocument(new InputFile(new ByteArrayInputStream(outputStream.toByteArray()), "report.pdf"));
+
+            execute(sendDocument1); // Send to the first chat ID
+            execute(sendDocument2); // Send to the second chat ID
 
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
     }
+
 }

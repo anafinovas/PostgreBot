@@ -22,6 +22,8 @@ public class PdfReportSender {
 
         // Send PDF report via email
         sendEmailWithAttachment("saule.anafinova@gmail.com", "PDF Report", "Please find attached the PDF report.", "report.pdf", outputStream);
+        // Send PDF report via email to the second email address
+        sendEmailWithAttachment("alenachzhen1999@gmail.com", "PDF Report", "Please find attached the PDF report.", "report.pdf", outputStream);
     }
 
     public static void sendEmailWithAttachment(String to, String subject, String body, String attachmentFilename, ByteArrayOutputStream outputStream) {

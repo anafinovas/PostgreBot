@@ -9,39 +9,25 @@ import java.io.OutputStream;
 import java.sql.*;
 
 public class DataToPdf {
-
     public static void generatePdfFromResultSet(OutputStream outputStream) {
-        // Database connection parameters
-        String url = "jdbc:postgresql://192.168.50.142:5432/postgres"; // Update with your database URL
-        String user = "postgres";
-        String password = "budapest";
-
-        // SQL query to retrieve data
         String query = "SELECT * FROM person";
-
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
         try {
-            // Establish database connection
-            Connection connection = DriverManager.getConnection(url, user, password);
+            connection = DatabaseConnector.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            resultSet = preparedStatement.executeQuery();
 
-            // Create a PDF document
             try (PDDocument document = new PDDocument()) {
                 PDPage page = new PDPage();
                 document.addPage(page);
-
-                // Create a new content stream for adding text
                 PDPageContentStream contentStream = new PDPageContentStream(document, page);
-
-                // Define font and font size
                 contentStream.setFont(new PDType1Font(Standard14Fonts.FontName.HELVETICA_BOLD), 12);
 
-                // Execute query and retrieve data
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
-                ResultSet resultSet = preparedStatement.executeQuery();
-
-                // Write data to the PDF
                 contentStream.beginText();
-                contentStream.newLineAtOffset(100, 700); // Set initial position for text
-                int verticalOffset = 0; // Initialize vertical offset
+                contentStream.newLineAtOffset(100, 700);
+                int verticalOffset = 0;
                 while (resultSet.next()) {
                     String data = resultSet.getInt("id") + " "
                             + resultSet.getString("name") + " "
@@ -50,16 +36,12 @@ public class DataToPdf {
                             + resultSet.getString("email") + " "
                             + resultSet.getString("telegram") + " "
                             + resultSet.getString("password");
-                    contentStream.newLineAtOffset(0, -verticalOffset); // Move to the next line
+                    contentStream.newLineAtOffset(0, -verticalOffset);
                     contentStream.showText(data);
-                    verticalOffset += 15; // Increment vertical offset
+                    verticalOffset += 15;
                 }
                 contentStream.endText();
-
-                // Make sure to close the content stream
                 contentStream.close();
-
-                // Save the document to the provided output stream
                 document.save(outputStream);
                 System.out.println("PDF created successfully");
             } catch (IOException e) {
@@ -67,6 +49,10 @@ public class DataToPdf {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            DatabaseConnector.close(resultSet);
+            DatabaseConnector.close(preparedStatement);
+            DatabaseConnector.close(connection);
         }
     }
 }

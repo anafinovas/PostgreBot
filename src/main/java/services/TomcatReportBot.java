@@ -1,3 +1,5 @@
+package services;
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
@@ -6,7 +8,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 public class TomcatReportBot extends TelegramLongPollingBot {
 
@@ -22,7 +23,7 @@ public class TomcatReportBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "TomcatReportBot";
+        return "services.TomcatReportBot";
     }
 
     @Override
@@ -32,7 +33,7 @@ public class TomcatReportBot extends TelegramLongPollingBot {
 
     public void run() {
         try {
-            // Get the Telegram value using TelegramRetriever
+            // Get the Telegram value using services.TelegramRetriever
             String chatId = TelegramRetriever.getTelegramForPersonId(1); // Assuming id = 1
 
             // Create a PDF
@@ -44,7 +45,7 @@ public class TomcatReportBot extends TelegramLongPollingBot {
             sendDocument.setChatId(chatId);
             sendDocument.setDocument(new InputFile(new ByteArrayInputStream(outputStream.toByteArray()), "report.pdf"));
 
-            execute(sendDocument); // Send to the chat ID retrieved from TelegramRetriever
+            execute(sendDocument); // Send to the chat ID retrieved from services.TelegramRetriever
 
         } catch (TelegramApiException e) {
             e.printStackTrace();

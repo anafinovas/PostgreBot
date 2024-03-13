@@ -1,3 +1,7 @@
+package services;
+
+import services.DatabaseConnector;
+
 import java.sql.*;
 
 public class TelegramRetriever {

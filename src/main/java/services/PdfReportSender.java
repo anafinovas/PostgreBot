@@ -1,3 +1,7 @@
+package services;
+
+import services.DataToPdf;
+
 import java.io.ByteArrayOutputStream;
 import java.util.Properties;
 import javax.mail.Message;

@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b1fb2e-5017-402f-b72e-fe8df531023e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ScheduledMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PdfReportSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PdfReportSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +98,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\saule\PostgresBot\src\main" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="java" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -124,7 +127,7 @@
       <workItem from="1710273252623" duration="409000" />
       <workItem from="1710274376198" duration="5000" />
       <workItem from="1710274402643" duration="4541000" />
-      <workItem from="1710283005267" duration="2424000" />
+      <workItem from="1710283005267" duration="6316000" />
     </task>
     <task id="LOCAL-00001" summary="Original Commit">
       <option name="closed" value="true" />
@@ -150,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710284878896</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Yaaay!!!">
+      <option name="closed" value="true" />
+      <created>1710285486292</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710285486292</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

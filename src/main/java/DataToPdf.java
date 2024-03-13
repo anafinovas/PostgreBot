@@ -48,7 +48,7 @@ public class DataToPdf {
                             + resultSet.getString("surname") + " "
                             + resultSet.getString("role") + " "
                             + resultSet.getString("email") + " "
-                            + resultSet.getString("telegarm") + " "
+                            + resultSet.getString("telegram") + " "
                             + resultSet.getString("password");
                     contentStream.newLineAtOffset(0, -verticalOffset); // Move to the next line
                     contentStream.showText(data);

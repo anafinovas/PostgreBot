@@ -27,6 +27,10 @@
       <id>Central Apache</id>
       <url>https://repo.maven.apache.org/maven2</url>
     </repository>
+    <repository>
+      <id>javax.mail</id>
+      <url>https://mvnrepository.com/artifact/javax.mail/javax.mail-api</url>
+    </repository>
   </repositories>
 
   <dependencies>

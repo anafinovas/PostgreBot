@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60b1fb2e-5017-402f-b72e-fe8df531023e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DatabaseConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataToPdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataToPdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ScheduledMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScheduledMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TelegramRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TelegramRetriever.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +65,7 @@
     &quot;Application.PdfReportSender.executor&quot;: &quot;Run&quot;,
     &quot;Application.ScheduledMain.executor&quot;: &quot;Run&quot;,
     &quot;Application.TelegramNotifier.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TelegramRetriever.executor&quot;: &quot;Run&quot;,
     &quot;Application.TomcatReportBot.executor&quot;: &quot;Run&quot;,
     &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
     &quot;Maven.PostgresBot [clean].executor&quot;: &quot;Run&quot;,
@@ -131,6 +131,8 @@
       <workItem from="1710274402643" duration="4541000" />
       <workItem from="1710283005267" duration="6316000" />
       <workItem from="1710316913102" duration="2218000" />
+      <workItem from="1710325197363" duration="3569000" />
+      <workItem from="1710335078901" duration="1818000" />
     </task>
     <task id="LOCAL-00001" summary="Original Commit">
       <option name="closed" value="true" />
@@ -172,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710317133120</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update">
+      <option name="closed" value="true" />
+      <created>1710324784324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710324784324</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

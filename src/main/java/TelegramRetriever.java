@@ -3,7 +3,7 @@ import java.sql.*;
 public class TelegramRetriever {
     public static void main(String[] args) {
         String telegram = getTelegramForPersonId(1);
-        //System.out.println("Telegram value for person with id 1: " + telegram);
+        System.out.println("Telegram value for person with id 1: " + telegram);
     }
 
     public static String getTelegramForPersonId(int id) {

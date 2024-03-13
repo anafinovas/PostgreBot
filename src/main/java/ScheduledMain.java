@@ -7,7 +7,7 @@ public class ScheduledMain {
 
     public static void main(String[] args) {
         // Schedule the execution at a specific time
-        scheduleExecution(9, 33); // 12:00 PM (noon)
+        scheduleExecution(14, 9); // 12:00 PM (noon)
     }
 
     public static void scheduleExecution(int hour, int minute) {

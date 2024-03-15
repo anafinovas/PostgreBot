@@ -32,7 +32,7 @@ public class PdfReportSender {
 
     public static void sendEmailWithAttachment(String to, String subject, String body, String attachmentFilename, ByteArrayOutputStream outputStream) {
         // Sender's email ID needs to be mentioned
-        String from = "saule.anafinova@gmail.com"; // Update with your email
+        String from = "postgres75@gmail.com"; // Update with your email
 
         // Assuming you are sending email from Gmail
         String host = "smtp.gmail.com";
@@ -49,7 +49,7 @@ public class PdfReportSender {
         // Get the default Session object.
         Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
             protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
-                return new javax.mail.PasswordAuthentication("saule.anafinova@gmail.com", "ypdu pvjj ifib hkfq"); // Update with your email and password
+                return new javax.mail.PasswordAuthentication("postgres75@gmail.com", "bnka ikby ctpz phiq"); // Update with your email and password
             }
         });
 
